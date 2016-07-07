@@ -23,7 +23,7 @@ public class Tools {
      * @param s --> java.lang.String
      * @return 为空则返回true，否则返回false
      */
-    public static boolean isNotAbsEmpty(String s) {
+    public static boolean isAbsEmpty(String s) {
     	if(s==null)
     		return true;
     	if("".equals(s))
@@ -44,8 +44,8 @@ public class Tools {
      * @param s java.lang.String
      * @return 不为空则返回true，否则返回false
      */
-    public static boolean isAbsEmpty(String s){
-    	return !isNotAbsEmpty(s);
+    public static boolean isNotAbsEmpty(String s){
+    	return !isAbsEmpty(s);
     }
     
     /**
@@ -55,9 +55,9 @@ public class Tools {
      * @return 不为空则返回true，否则返回false
      */
     public static boolean isEmpty(String s){
-    	if("".equals(s))
-    		return true;
     	if(null==s)
+    		return true;
+    	if("".equals(s.trim()))
     		return true;
     	return false;
     }
