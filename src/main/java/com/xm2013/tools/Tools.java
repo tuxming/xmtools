@@ -15,6 +15,31 @@ import java.util.regex.Pattern;
 public class Tools {
 	
 	/**
+	 * yyyyMMddHHmmss
+	 */
+	public static String pattern1 = "yyyyMMddHHmmss";
+	
+	/**
+	 * yyyy-MM-dd HH:mm:ss
+	 */
+	public static String pattern2 = "yyyy-MM-dd HH:mm:ss";
+	
+	/**
+	 * yyyy/MM/dd HH:mm:ss
+	 */
+	public static String pattern3 = "yyyy/MM/dd HH:mm:ss";
+	
+	/**
+	 * yyyy/MM/dd
+	 */
+	public static String pattern4 = "yyyy/MM/dd";
+	
+	/**
+	 * HH:mm:ss
+	 */
+	public static String pattern5 = "HH:mm:ss";
+	
+	/**
      * 检测字符串是否绝对为空
      *	null   ==> true
      *	"null" ==> true
@@ -138,8 +163,7 @@ public class Tools {
     public static boolean checkMobileNumber(String mobileNumber) {
         boolean flag = false;
         try {
-            Pattern regex = Pattern
-                    .compile("^(((13[0-9])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8})|(0\\d{2}-\\d{8})|(0\\d{3}-\\d{7})$");
+            Pattern regex = Pattern.compile("^1[34578]\\d{9}$");
             Matcher matcher = regex.matcher(mobileNumber);
             flag = matcher.matches();
         } catch (Exception e) {

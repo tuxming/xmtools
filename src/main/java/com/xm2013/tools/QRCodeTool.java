@@ -13,6 +13,7 @@ import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 
 /**
+ * http://blog.csdn.net/zgliang88/article/details/54617795
  * @author tuxming
  *
  */
